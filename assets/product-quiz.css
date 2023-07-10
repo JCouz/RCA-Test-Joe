@@ -20,7 +20,11 @@
   justify-content: center;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-left: 350px;
+}
+
+.content {
+  align-items: end;
+  margin-right: 64px;
 }
 
 .slide-1 h1 {
