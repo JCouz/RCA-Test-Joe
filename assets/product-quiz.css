@@ -22,10 +22,10 @@
 }
 
 .content {
-  align-items: end;
-  margin-right: 64px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .slide-1 h1 {
