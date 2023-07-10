@@ -1,3 +1,15 @@
-h1{
-  color: red;
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+.slide-1 {
+  background: url(/assets/background-img.jpg);
+}
+
+.container h1 {
 }
