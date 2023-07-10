@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "product-quiz": {
+      "type": "product-quiz",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "product-quiz"
+  ]
+}
