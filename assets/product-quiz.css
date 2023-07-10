@@ -14,8 +14,7 @@
   height: 701px;
   background-image: url(https://cdn.shopify.com/s/files/1/0761/8176/6464/files/background-img.jpg?v=1689023157);
   object-fit: cover;
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
@@ -25,6 +24,8 @@
 .content {
   align-items: end;
   margin-right: 64px;
+  display: flex;
+  flex-direction: column;
 }
 
 .slide-1 h1 {
