@@ -10,7 +10,7 @@
 }
 
 .slide-1 {
-  width: 100%;
+  width: 100vw;
   height: 701px;
   background-image: url(https://cdn.shopify.com/s/files/1/0761/8176/6464/files/background-img.jpg?v=1689023157);
   object-fit: cover;
