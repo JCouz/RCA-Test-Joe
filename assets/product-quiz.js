@@ -1,12 +1,11 @@
 let currentSlide = 0;
 const startBtn = document.getElementById('startBtn');
 
-console.log("I'm through");
-
 startBtn.addEventListener('click', startQuiz);
 
 function startQuiz() {
   console.log('Working');
+    startBtn.classList.add()
 }
 
 questions = {
