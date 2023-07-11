@@ -1,7 +1,7 @@
 let currentSlide = 0;
 const startBtn = document.getElementById('startBtn');
 const startSlide = document.getElementById('startSlide');
-const quizSlides = document.getElementById('quiz-slides');
+const quizSlides = document.getElementById('quizSlides');
 
 startBtn.addEventListener('click', startQuiz);
 
