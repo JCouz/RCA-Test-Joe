@@ -1,11 +1,13 @@
 let currentSlide = 0;
 const startBtn = document.getElementById('startBtn');
+const quizSlides = document.getElementById('quiz-slides');
 
 startBtn.addEventListener('click', startQuiz);
 
 function startQuiz() {
   console.log('Working');
-    startBtn.classList.add()
+  startBtn.classList.add('hide');
+  quizSlides.classList.remove('hide');
 }
 
 questions = {
