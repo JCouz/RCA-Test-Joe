@@ -22,6 +22,7 @@ button {
   letter-spacing: 0.15px;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 }
 
 .hide {

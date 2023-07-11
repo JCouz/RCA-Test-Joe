@@ -1,12 +1,12 @@
 let currentSlide = 0;
-const startBtn = document.getElementById('startSlide');
+const startBtn = document.getElementById('startBtn');
+const startSlide = document.getElementById('startSlide');
 const quizSlides = document.getElementById('quiz-slides');
 
 startBtn.addEventListener('click', startQuiz);
 
 function startQuiz() {
-  console.log('Working');
-  startBtn.classList.add('hide');
+  startSlide.classList.add('hide');
   quizSlides.classList.remove('hide');
 }
 
