@@ -1,5 +1,5 @@
 let currentSlide = 0;
-const startBtn = document.getElementById('startBtn');
+const startBtn = document.getElementById('start-slide');
 const quizSlides = document.getElementById('quiz-slides');
 
 startBtn.addEventListener('click', startQuiz);

@@ -6,6 +6,28 @@
   outline: none;
 }
 
+button {
+  border-radius: 5px;
+  background: #d83696;
+  width: 188px;
+  padding: 16px 38px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.15px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -15,10 +37,6 @@
   height: 701px;
   margin: 300px auto;
   padding: 0;
-}
-
-.hide {
-  display: none;
 }
 
 .start-slide {
@@ -72,20 +90,8 @@
   margin-bottom: 32px;
 }
 
-button {
-  border-radius: 5px;
-  background: #d83696;
-  width: 188px;
-  padding: 16px 38px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  color: #fff;
-  text-align: center;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: 0.15px;
-  text-transform: uppercase;
-  border: none;
+.quiz-slides {
+  color: red;
+  display: flex;
+  flex-direction: column;
 }
