@@ -188,7 +188,7 @@ function showSlide(i) {
       optionText.className = 'optionText';
       optionText.textContent = currentQuestion.options[j].typeText;
         
-      document.getElementById('optionText').appendChild(d);
+      document.getElementById('optionContainer').appendChild(optionText);
     }
   }
 
