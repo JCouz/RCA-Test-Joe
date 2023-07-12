@@ -124,7 +124,7 @@ p .question-text {
 
 .optionContainer{
     display: flex;
-    flex-direction: row
+    flex-direction: row;
 }
 
 /* p .option-text {
