@@ -156,13 +156,19 @@ function showSlide(i) {
   questionText.textContent = currentQuestion.text;
 
   for (let i = 0; i < currentQuestion.options.length; i++) {
+
+    let img = document.createElement('img');
+    img.src = option.image;
+
+    document.getElementById('quizSlides').appendChild(img);
+    down.innerHTML = "Image Element Added.";
     
-    var tag = document.createElement("img");
-    var text = document.createTextNode(option.typeText);
-    tag.appendChild(text);
+    //var tag = document.createElement("img");
+    //var text = document.createTextNode(option.typeText);
+    //tag.appendChild(text);
     
-    var element = document.getElementById("quizSlides");
-    element.appendChild(tag);
+    //var element = document.getElementById("");
+    //element.appendChild(tag);
     
     //const option = currentQuestion.options[i];
     //optionImg.src = option.image;
