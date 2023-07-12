@@ -183,8 +183,6 @@ function showSlide(i) {
     for (let j = 0; j < currentQuestion.options.length; j++) {
       
       const optionText = document.createElement('div');
-      optionText.width = 119;
-      optionText.height = 119;
       optionText.className = 'optionTextOnly';
       optionText.textContent = currentQuestion.options[j].typeText;
         
