@@ -203,7 +203,7 @@ function showSlide(i) {
     resultBtn.classList.remove('hide')
   } else {
      nextBtn.classList.remove('hide');
-    resultBtn.classList.add('hide')
+    resultBtn.classList.add('hide');
   }
 }
 
