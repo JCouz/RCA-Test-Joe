@@ -227,5 +227,5 @@ function goToNextSlide() {
 
 function goToResultSlide() {
      quizSlides.classList.add('hide');
-  resultSlide.classList.remove('hide')
+  resultSlide.classList.remove('hide');
 }
