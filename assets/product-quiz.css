@@ -126,6 +126,7 @@ p .question-text {
     display: flex;
     flex-direction: row;
   gap: 24px;
+  padding: 32px 0;
 }
 
 /* p .option-text {
