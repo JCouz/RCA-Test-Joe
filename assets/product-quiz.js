@@ -168,7 +168,7 @@ function showSlide(i) {
       img.addEventListener("click", function() {
         img.className = 'selectedImage';
         currentQuestion.options[j].selected = true;
-      }));
+      });
       
       const optionText = document.createElement('p');
       optionText.className = 'optionText';
