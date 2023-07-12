@@ -157,6 +157,8 @@ function showSlide(i) {
 
   for (let i = 0; i < currentQuestion.options.length; i++) {
 
+    alert('HERE!');
+    
     let img = document.createElement('img');
     img.src = option.image;
     img.width = 119;
