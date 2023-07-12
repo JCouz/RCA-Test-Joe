@@ -156,9 +156,17 @@ function showSlide(i) {
   questionText.textContent = currentQuestion.text;
 
   for (let i = 0; i < currentQuestion.options.length; i++) {
-    const option = currentQuestion.options[i];
-    optionImg.src = option.image;
-    optionText[i].textContent = option.typeText;
+    
+    var tag = document.createElement("img");
+    var text = document.createTextNode(option.typeText);
+    tag.appendChild(text);
+    
+    var element = document.getElementById("quizSlides");
+    element.appendChild(tag);
+    
+    //const option = currentQuestion.options[i];
+    //optionImg.src = option.image;
+    //optionText[i].textContent = option.typeText;
   }
 
   // Show or hide the back and next buttons
