@@ -5,11 +5,13 @@ const resultSlide = document.getElementById('resultSlide');
 const backBtn = document.getElementById('backBtn');
 const nextBtn = document.getElementById('nextBtn');
 const resultBtn = document.getElementById('resultBtn');
+const exitBtn = document.getElementById('exitBtn');
 
 startBtn.addEventListener('click', startQuiz);
 backBtn.addEventListener('click', goToPreviousSlide);
 nextBtn.addEventListener('click', goToNextSlide);
 resultBtn.addEventListener('click', goToResultSlide);
+exitBtn.addEventListener('click', goToExit);
 
 let currentSlide = 0;
 
@@ -127,7 +129,7 @@ let questions = {
         selected: false,
       },
       {
-        typeText: 'Protective bands',
+        typeText: 'Protective braids',
         selected: false,
       },
       {
@@ -151,8 +153,6 @@ function startQuiz() {
 function showSlide(i) {
   const question = document.getElementById('question');
   const questionText = document.getElementById('questionText');
-  const optionImg = document.getElementById('optionImg');
-  const optionText = document.getElementsByClassName('optionText');
 
   const currentQuestion = Object.values(questions)[i];
   question.textContent = currentQuestion.question;
@@ -161,48 +161,69 @@ function showSlide(i) {
   document.getElementById('optionContainer').innerHTML = '';
 
   if (i < 2) {
-
     for (let j = 0; j < currentQuestion.options.length; j++) {
-  
       const img = document.createElement('img');
       img.src = currentQuestion.options[j].image;
       img.width = 119;
       img.height = 119;
-      img.className = currentQuestion.options[j].selected ? 'selectedImage' : '';
-      img.addEventListener("click", function() {
-        currentQuestion.options[j].selected = !currentQuestion.options[j].selected;
-        img.className = currentQuestion.options[j].selected ? 'selectedImage' : '';
+      img.className = currentQuestion.options[j].selected
+        ? 'selected-image'
+        : '';
+      img.addEventListener('click', function () {
+        currentQuestion.options[j].selected =
+          !currentQuestion.options[j].selected;
+        img.className = currentQuestion.options[j].selected
+          ? 'selected-image'
+          : '';
       });
-      
+
       const optionText = document.createElement('p');
       optionText.className = 'optionText';
       optionText.textContent = currentQuestion.options[j].typeText;
-  
+      optionText.className = currentQuestion.options[j].selected
+        ? 'selected-text'
+        : 'option-text';
+      optionImg.addEventListener('click', function () {
+        currentQuestion.options[j].selected =
+          !currentQuestion.options[j].selected;
+        optionImg.className = currentQuestion.options[j].selected
+          ? 'selected-image'
+          : '';
+      });
+
       const d = document.createElement('div');
-      d.className = 'innerContainer'
+      d.className = 'innerContainer';
       d.appendChild(img);
-      d.appendChild(optionText)
-      
+      d.appendChild(optionText);
+
       document.getElementById('optionContainer').appendChild(d);
     }
-  }
-  else
-  {
+  } else {
     for (let j = 0; j < currentQuestion.options.length; j++) {
-      
-      const optionText = document.createElement('div');
-      optionText.className = 'optionTextOnly';
+      const optionText = document.createElement('p');
+      optionText.className = 'option-text-only';
       optionText.textContent = currentQuestion.options[j].typeText;
-        
+
+      optionText.className = currentQuestion.options[j].selected
+        ? 'selected-text-only'
+        : 'option-text-only';
+      optionText.addEventListener('click', function () {
+        currentQuestion.options[j].selected =
+          !currentQuestion.options[j].selected;
+        optionText.className = currentQuestion.options[j].selected
+          ? 'selected-text-only'
+          : 'option-text-only';
+      });
+
       document.getElementById('optionContainer').appendChild(optionText);
     }
   }
 
   if (i === Object.keys(questions).length - 1) {
     nextBtn.classList.add('hide');
-    resultBtn.classList.remove('hide')
+    resultBtn.classList.remove('hide');
   } else {
-     nextBtn.classList.remove('hide');
+    nextBtn.classList.remove('hide');
     resultBtn.classList.add('hide');
   }
 }
@@ -226,6 +247,10 @@ function goToNextSlide() {
 }
 
 function goToResultSlide() {
-     quizSlides.classList.add('hide');
+  quizSlides.classList.add('hide');
   resultSlide.classList.remove('hide');
+}
+
+function goToExit() {
+  resultSlide.classList.add('hide');
 }

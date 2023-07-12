@@ -10,12 +10,10 @@ button {
   border-radius: 5px;
   background: #d83696;
   width: 188px;
-  padding: 16px 38px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  padding: 13px 12px;
   color: #fff;
   text-align: center;
+  font-family: Futura;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -23,6 +21,7 @@ button {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  margin: 0;
 }
 
 .hide {
@@ -114,7 +113,20 @@ button {
   margin: auto;
 }
 
-p .question-text {
+.quiz-slides h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.3px;
+  padding-bottom: 20px;
+}
+
+.inner-container img {
+  cursor: pointer;
+}
+
+p.question-text {
   color: #101010;
   font-size: 15px;
   font-weight: 400;
@@ -122,18 +134,7 @@ p .question-text {
   letter-spacing: 0.15px;
 }
 
-#optionContainer{
-    display: flex;
-    flex-direction: row;
-  gap: 24px;
-  padding: 32px 0;
-}
-
-
-.selectedImage{
-    border: 3px solid #d83696;
-}
-/* p .option-text {
+p.option-text {
   color: rgba(16, 16, 16, 0.5);
   font-size: 16px;
   font-style: normal;
@@ -141,9 +142,97 @@ p .question-text {
   line-height: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-} */
+  padding-top: 33px;
+}
+
+#optionContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 49px;
+  padding: 38px 0 116px 0;
+  flex-wrap: wrap;
+}
+
+.selected-image {
+  border: 3px solid #d83696;
+  width: 119px;
+  height: 119px;
+  border-radius: 75px;
+  box-sizing: border-box;
+}
+
+.selected-text {
+  color: #101010;
+}
+
+.option-text-only {
+  color: #101010;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  width: 202px;
+  height: 45px;
+  border-radius: 5px;
+  background: rgba(216, 54, 150, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.selected-text-only {
+  color: #101010;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+  width: 202px;
+  height: 45px;
+  border-radius: 5px;
+  background: rgba(216, 54, 150, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  border: 3px solid #d83696;
+}
+
+.option-text-only:hover {
+  border-radius: 5px;
+  border: 3px solid #d83696;
+  cursor: pointer;
+}
 
 .back-btn {
   background: #fff;
   color: #d83696;
+  margin-right: 6px;
+}
+
+.result-slide {
+  background: #f5d6dd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 1020px;
+  width: 1600px;
+  color: #101010;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.exit-button {
 }
