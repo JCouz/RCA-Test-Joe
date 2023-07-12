@@ -221,7 +221,6 @@ function goToNextSlide() {
   if (currentSlide < Object.keys(questions).length - 1) {
     currentSlide++;
     showSlide(currentSlide);
-  } else {
   }
 }
 
