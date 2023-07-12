@@ -1,6 +1,7 @@
 const startBtn = document.getElementById('startBtn');
 const startSlide = document.getElementById('startSlide');
 const quizSlides = document.getElementById('quizSlides');
+const resultSlide = document.getElementById('resultSlide');
 const backBtn = document.getElementById('backBtn');
 const nextBtn = document.getElementById('nextBtn');
 const resultBtn = document.getElementById('resultBtn');
