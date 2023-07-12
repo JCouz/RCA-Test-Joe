@@ -159,9 +159,11 @@ function showSlide(i) {
 
     let img = document.createElement('img');
     img.src = option.image;
+    img.width = 119;
+    img.height = 119;
 
-    document.getElementById('quizSlides').appendChild(img);
-    down.innerHTML = "Image Element Added.";
+    document.getElementById('imageContainer').appendChild(img);
+    //down.innerHTML = "Image Element Added.";
     
     //var tag = document.createElement("img");
     //var text = document.createTextNode(option.typeText);
