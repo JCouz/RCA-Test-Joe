@@ -157,15 +157,20 @@ function showSlide(i) {
 
   for (let j = 0; j < currentQuestion.options.length; j++) {
   
-    let img = document.createElement('img');
+    const img = document.createElement('img');
     img.src = currentQuestion.options[j].image;
     img.width = 119;
     img.height = 119;
     
-    var text = document.createTextNode(currentQuestion.options[j].typeText);
-    img.appendChild(text);
+    const optionText = document.createElement('p');
+    optionText.className = 'optionText';
+    optionText.textContent = currentQuestion.options[j].typeText;
 
-    document.getElementById('imageContainer').appendChild(img);
+    const d = document.createElement('div');
+    d.appendChild(img);
+    d.appendChild(optionText)
+    
+    document.getElementById('imageContainer').appendChild(d);
     
     //down.innerHTML = "Image Element Added.";
     
