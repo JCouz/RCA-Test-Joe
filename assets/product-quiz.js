@@ -180,7 +180,16 @@ function showSlide(i) {
   }
   else
   {
-    
+    for (let j = 0; j < currentQuestion.options.length; j++) {
+      
+      const optionText = document.createElement('p');
+      optionText.width = 119;
+      optionText.height = 119;
+      optionText.className = 'optionText';
+      optionText.textContent = currentQuestion.options[j].typeText;
+        
+      document.getElementById('optionText').appendChild(d);
+    }
   }
 
   // Show or hide the back and next buttons
