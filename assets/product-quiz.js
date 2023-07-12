@@ -165,7 +165,7 @@ function showSlide(i) {
       img.src = currentQuestion.options[j].image;
       img.width = 119;
       img.height = 119;
-      img.addEventListener("click", () => {
+      img.addEventListener("click", function() {
         img.className = 'selectedImage';
         currentQuestion.options[j].selected = true;
       }));
