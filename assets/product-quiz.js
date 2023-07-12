@@ -196,7 +196,7 @@ function showSlide(i) {
   }
 
   if (i === Object.keys(questions).length - 1) {
-    nextBtn.textContent = 'Finish';
+    nextBtn.textContent = 'Get your result';
   } else {
     nextBtn.textContent = 'Next';
   }
