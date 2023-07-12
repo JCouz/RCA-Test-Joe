@@ -161,6 +161,9 @@ function showSlide(i) {
     img.src = currentQuestion.options[j].image;
     img.width = 119;
     img.height = 119;
+    
+    var text = document.createTextNode(currentQuestion.options[j].typeText);
+    img.appendChild(text);
 
     document.getElementById('imageContainer').appendChild(img);
     
