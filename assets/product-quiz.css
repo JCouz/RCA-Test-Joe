@@ -126,7 +126,7 @@ button {
   cursor: pointer;
 }
 
-p.question-text {
+p#questionText {
   color: #101010;
   font-size: 15px;
   font-weight: 400;
