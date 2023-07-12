@@ -193,11 +193,11 @@ function showSlide(i) {
   }
 
   // Show or hide the back and next buttons
-  if (i === 0) {
-    backBtn.style.display = 'none';
-  } else {
-    backBtn.style.display = '';
-  }
+  //if (i === 0) {
+  //  backBtn.style.display = 'none';
+  //} else {
+  //  backBtn.style.display = '';
+  //}
 
   if (i === Object.keys(questions).length - 1) {
     nextBtn.textContent = 'Finish';
