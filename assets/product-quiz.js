@@ -155,10 +155,10 @@ function showSlide(i) {
   question.textContent = currentQuestion.question;
   questionText.textContent = currentQuestion.text;
 
-  for (let i = 0; i < currentQuestion.options.length; i++) {
-   
-    let img = document.createElement('img' + i);
-    img.src = option[i].image;
+  for (let j = 0; j < currentQuestion.options.length; j++) {
+  
+    let img = document.createElement('img');
+    img.src = currentQuestion.options[i].image;
     img.width = 119;
     img.height = 119;
 
