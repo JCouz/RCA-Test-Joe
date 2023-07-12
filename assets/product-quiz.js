@@ -156,15 +156,14 @@ function showSlide(i) {
   questionText.textContent = currentQuestion.text;
 
   for (let i = 0; i < currentQuestion.options.length; i++) {
-
-    alert('HERE!');
-    
-    let img = document.createElement('img');
-    img.src = option.image;
+   
+    let img = document.createElement('img' + i);
+    img.src = option[i].image;
     img.width = 119;
     img.height = 119;
 
     document.getElementById('imageContainer').appendChild(img);
+    
     //down.innerHTML = "Image Element Added.";
     
     //var tag = document.createElement("img");
