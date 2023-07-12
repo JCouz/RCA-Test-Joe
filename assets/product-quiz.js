@@ -156,24 +156,31 @@ function showSlide(i) {
   questionText.textContent = currentQuestion.text;
 
   document.getElementById('optionContainer').innerHTML = '';
-  
-  for (let j = 0; j < currentQuestion.options.length; j++) {
-  
-    const img = document.createElement('img');
-    img.src = currentQuestion.options[j].image;
-    img.width = 119;
-    img.height = 119;
-    
-    const optionText = document.createElement('p');
-    optionText.className = 'optionText';
-    optionText.textContent = currentQuestion.options[j].typeText;
 
-    const d = document.createElement('div');
-    d.className = 'innerContainer'
-    d.appendChild(img);
-    d.appendChild(optionText)
+  if (i < 3)
+  {
+    for (let j = 0; j < currentQuestion.options.length; j++) {
+  
+      const img = document.createElement('img');
+      img.src = currentQuestion.options[j].image;
+      img.width = 119;
+      img.height = 119;
+      
+      const optionText = document.createElement('p');
+      optionText.className = 'optionText';
+      optionText.textContent = currentQuestion.options[j].typeText;
+  
+      const d = document.createElement('div');
+      d.className = 'innerContainer'
+      d.appendChild(img);
+      d.appendChild(optionText)
+      
+      document.getElementById('optionContainer').appendChild(d);
+    }
+  }
+  else
+  {
     
-    document.getElementById('optionContainer').appendChild(d);
   }
 
   // Show or hide the back and next buttons
