@@ -122,7 +122,7 @@ p .question-text {
   letter-spacing: 0.15px;
 }
 
-.optionContainer{
+#optionContainer{
     display: flex;
     flex-direction: row;
 }
