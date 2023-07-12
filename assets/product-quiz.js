@@ -200,7 +200,8 @@ function showSlide(i) {
     nextBtn.classList.add('hide');
     resultBtn.classList.remove('hide')
   } else {
-    nextBtn.textContent = 'Next';
+     nextBtn.classList.remove('hide');
+    resultBtn.classList.add('hide')
   }
 }
 
