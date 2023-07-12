@@ -50,9 +50,14 @@ button {
   justify-content: center;
   background-repeat: no-repeat;
   background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.quiz-content {
+.quiz-start-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,7 +97,24 @@ button {
 }
 
 .quiz-slides {
-  color: red;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #f5d6dd;
+  height: 735px;
+  width: 1600px;
+  color: red; /* Just for testing, remove this line */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.back-btn {
+  background: #fff;
+  color: #d83696;
 }
