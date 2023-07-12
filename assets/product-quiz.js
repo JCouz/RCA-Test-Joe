@@ -157,7 +157,7 @@ function showSlide(i) {
 
   document.getElementById('optionContainer').innerHTML = '';
 
-  if (i < 3)
+  if (i < 2)
   {
     for (let j = 0; j < currentQuestion.options.length; j++) {
   
