@@ -9,7 +9,7 @@ const resultBtn = document.getElementById('resultBtn');
 startBtn.addEventListener('click', startQuiz);
 backBtn.addEventListener('click', goToPreviousSlide);
 nextBtn.addEventListener('click', goToNextSlide);
-resultBtn.addEventlistener('click', goToResultSlide);
+resultBtn.addEventListener('click', goToResultSlide);
 
 let currentSlide = 0;
 
