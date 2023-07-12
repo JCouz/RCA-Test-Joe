@@ -3,6 +3,7 @@ const startSlide = document.getElementById('startSlide');
 const quizSlides = document.getElementById('quizSlides');
 const backBtn = document.getElementById('backBtn');
 const nextBtn = document.getElementById('nextBtn');
+const resultBtn = document.getElementById('resultBtn');
 
 startBtn.addEventListener('click', startQuiz);
 backBtn.addEventListener('click', goToPreviousSlide);
@@ -196,7 +197,8 @@ function showSlide(i) {
   }
 
   if (i === Object.keys(questions).length - 1) {
-    nextBtn.textContent = 'Get your result';
+    nextBtn.classList.add('hide');
+    resultBtn.classList.remove('hide')
   } else {
     nextBtn.textContent = 'Next';
   }
