@@ -157,8 +157,8 @@ function showSlide(i) {
 
   document.getElementById('optionContainer').innerHTML = '';
 
-  if (i < 2)
-  {
+  if (i < 2) {
+
     for (let j = 0; j < currentQuestion.options.length; j++) {
   
       const img = document.createElement('img');
