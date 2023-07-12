@@ -167,10 +167,11 @@ function showSlide(i) {
     optionText.textContent = currentQuestion.options[j].typeText;
 
     const d = document.createElement('div');
+    d.className = 'innerContainer'
     d.appendChild(img);
     d.appendChild(optionText)
     
-    document.getElementById('imageContainer').appendChild(d);
+    document.getElementById('optionContainer').appendChild(d);
     
     //down.innerHTML = "Image Element Added.";
     
