@@ -129,6 +129,10 @@ p .question-text {
   padding: 32px 0;
 }
 
+
+.selectedImage{
+    border: 3px solid #d83696;
+}
 /* p .option-text {
   color: rgba(16, 16, 16, 0.5);
   font-size: 16px;
