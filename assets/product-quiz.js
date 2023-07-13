@@ -175,6 +175,10 @@ function showSlide(i) {
         img.className = currentQuestion.options[j].selected
           ? 'selected-image'
           : '';
+
+        optionText.className = currentQuestion.options[j].selected
+          ? 'selected-text'
+          : 'option-text';
       });
 
       const optionText = document.createElement('p');
@@ -183,13 +187,6 @@ function showSlide(i) {
       optionText.className = currentQuestion.options[j].selected
         ? 'selected-text'
         : 'option-text';
-      img.addEventListener('click', function () {
-        currentQuestion.options[j].selected =
-          !currentQuestion.options[j].selected;
-        optionText.className = currentQuestion.options[j].selected
-          ? 'selected-text'
-          : 'option-text';
-      });
 
       const d = document.createElement('div');
       d.className = 'innerContainer';
