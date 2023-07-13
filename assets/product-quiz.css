@@ -129,16 +129,6 @@ button:hover {
   padding-top: 100px;
 }
 
-.innerContainer {
-  cursor: pointer;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 165px;
-  min-height: 200px;
-}
-
 p#questionText {
   color: #101010;
   font-size: 15px;
@@ -158,6 +148,15 @@ p.option-text {
   padding-top: 30px;
   max-width: 165px;
   display: inline-block;
+}
+.innerContainer {
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 165px;
+  min-height: 200px;
 }
 
 #optionContainer {
@@ -317,4 +316,97 @@ p.option-text {
 .product-btn {
   margin-top: 30px;
   width: 100%;
+}
+
+/* Mobile media query */
+
+@media only screen and (max-width: 767px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 1034px;
+    height: 633px;
+    margin: auto;
+    padding: 0;
+  }
+
+  /* First slide */
+
+  .start-slide {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://cdn.shopify.com/s/files/1/0761/8176/6464/files/background-mob.jpg?v=1689247724);
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+  }
+
+  .quiz-start-content {
+    margin: 0;
+  }
+
+  .start-slide h1 {
+    color: #e33b9f;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: 0.3px;
+  }
+
+  .start-h1 {
+    color: #e977c2;
+    font-size: 30px;
+    line-height: normal;
+    letter-spacing: 0.3px;
+  }
+
+  .start-slide p {
+    width: 363px;
+    height: 93px;
+  }
+
+  /* Question slides */
+
+  .quiz-slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f5d6dd;
+    width: 420px;
+    height: 1118px;
+    color: #101010;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .quiz-slides h2 {
+    font-size: 20px;
+    line-height: normal;
+    letter-spacing: 0.2px;
+  }
+
+  #optionContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 38px 0 95px 0;
+    gap: 6px;
+  }
+
+  .innerContainer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(50% - 12px);
+  }
 }
