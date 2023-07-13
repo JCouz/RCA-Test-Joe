@@ -24,10 +24,11 @@
       <div class="quiz-content">
         <h2 id="question">Test</h2>
         <p id="questionText" class="question-text">Test</p>
-        <div id="optionContainer"></div>
+        <div id="optionContainer" class="option-container"></div>
+        <div id="optionOnlyContainer" class="option-only-container hide"></div>
         <button id="backBtn" class="back-btn">Go back</button>
         <button id="nextBtn" class="next-btn">Next</button>
-        <button id="resultBtn" class="result-btn hide">Get your result</button>
+        <button id="resultBtn" class="result-btn hide">Get your results</button>
       </div>
     </div>
   </div>
@@ -40,7 +41,35 @@
           Your suggest products
         </h1>
         <p>Fusce gravida cursus arcu, imperdiet placerat neque mollis ut. In hac habitasse platea dictumst. Cras aliquet eros vel augue convallis.</p>
-        <button id="exitBtn" class="exit-button">Exit</button>
+        <div class="products">
+          <div class="product1"><img
+              src=""
+              alt=""
+              width='341'
+              height='341'
+              loading="lazy">
+            <div class="info-container">
+              <p id="infoName" class="info-name">Product name here</p>
+              <p id="infoPrice" class="info-price">£00</p>
+            </div>
+            <button class="product-btn">Add to cart</button>
+          </div>
+          <div class="product2">
+            <img
+              src=""
+              alt=""
+              width='341'
+              height='341'
+              loading="lazy">
+            <div class="info-container">
+              <p id="infoName" class="info-name">Product name here</p>
+              <p id="infoPrice" class="info-price">£00</p>
+            </div>
+            <button class="product-btn">Add to cart</button>
+          </div>
+        </div>
+
+        <button id="exitBtn" class="exit-btn">Exit</button>
       </div>
     </div>
   </div>

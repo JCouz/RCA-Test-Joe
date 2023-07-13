@@ -6,6 +6,8 @@ const backBtn = document.getElementById('backBtn');
 const nextBtn = document.getElementById('nextBtn');
 const resultBtn = document.getElementById('resultBtn');
 const exitBtn = document.getElementById('exitBtn');
+const optionContainer = document.getElementById('optionContainer');
+const optionOnlyContainer = document.getElementById('optionOnlyContainer');
 
 startBtn.addEventListener('click', startQuiz);
 backBtn.addEventListener('click', goToPreviousSlide);
@@ -161,6 +163,9 @@ function showSlide(i) {
   document.getElementById('optionContainer').innerHTML = '';
 
   if (i < 2) {
+    optionOnlyContainer.classList.add('hide');
+    optionContainer.classList.remove('hide');
+
     for (let j = 0; j < currentQuestion.options.length; j++) {
       const img = document.createElement('img');
       img.src = currentQuestion.options[j].image;
@@ -196,6 +201,11 @@ function showSlide(i) {
       document.getElementById('optionContainer').appendChild(d);
     }
   } else {
+    document.getElementById('optionOnlyContainer').innerHTML = '';
+
+    optionOnlyContainer.classList.remove('hide');
+    optionContainer.classList.add('hide');
+
     for (let j = 0; j < currentQuestion.options.length; j++) {
       const optionText = document.createElement('p');
       optionText.className = 'option-text-only';
@@ -212,7 +222,7 @@ function showSlide(i) {
           : 'option-text-only';
       });
 
-      document.getElementById('optionContainer').appendChild(optionText);
+      document.getElementById('optionOnlyContainer').appendChild(optionText);
     }
   }
 

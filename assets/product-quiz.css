@@ -24,6 +24,12 @@ button {
   margin: 0;
 }
 
+button:hover {
+  background: #fff;
+  color: #d83696;
+  outline: 2px solid #d83696;
+}
+
 .hide {
   display: none !important;
 }
@@ -130,6 +136,7 @@ button {
   flex-direction: column;
   align-items: center;
   min-width: 165px;
+  min-height: 200px;
 }
 
 p#questionText {
@@ -142,13 +149,13 @@ p#questionText {
 
 p.option-text {
   color: rgba(16, 16, 16, 0.5);
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  padding-top: 26px;
+  padding-top: 30px;
   max-width: 165px;
   display: inline-block;
 }
@@ -156,7 +163,17 @@ p.option-text {
 #optionContainer {
   display: flex;
   flex-direction: row;
-  padding: 38px 0 116px 0;
+  padding: 38px 0 95px 0;
+  gap: 6px;
+}
+
+#optionOnlyContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 38px 0 186px 0;
+  gap: 19px;
+  flex-wrap: wrap;
+  width: 645px;
 }
 
 .selected-image {
@@ -170,13 +187,13 @@ p.option-text {
 
 .selected-text {
   color: #101010;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  padding-top: 26px;
+  padding-top: 30px;
   max-width: 165px;
   display: inline-block;
 }
@@ -226,10 +243,18 @@ p.option-text {
   cursor: pointer;
 }
 
-.back-btn {
+.back-btn,
+.exit-btn {
   background: #fff;
   color: #d83696;
   margin-right: 6px;
+}
+
+.back-btn:hover,
+.exit-btn:hover {
+  background: #d83696;
+  color: #fff;
+  outline: 2px solid #fff;
 }
 
 .result-slide {
@@ -239,7 +264,7 @@ p.option-text {
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 1020px;
+  height: 890px;
   width: 1600px;
   color: #101010;
   position: absolute;
@@ -250,5 +275,46 @@ p.option-text {
   margin: auto;
 }
 
-.exit-button {
+.quiz-result-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-slide p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.15px;
+}
+
+.products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 23px;
+  margin: 38px 0 135px 0;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-price,
+.info-name {
+  text-transform: uppercase;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 42px;
+  letter-spacing: 0.17px;
+  margin-top: 8px;
+}
+
+.product-btn {
+  margin-top: 30px;
+  width: 100%;
 }
