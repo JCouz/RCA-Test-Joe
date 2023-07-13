@@ -303,8 +303,8 @@ p.option-text {
   justify-content: space-between;
 }
 
-.info-price,
-.info-name {
+p.info-price,
+p.info-name {
   text-transform: uppercase;
   font-size: 17px;
   font-weight: 400;
@@ -390,7 +390,8 @@ p.option-text {
     margin: auto;
   }
 
-  .quiz-slides h2 {
+  .quiz-slides h2,
+  .result-slide h2 {
     font-size: 20px;
     line-height: normal;
     letter-spacing: 0.2px;
@@ -408,5 +409,55 @@ p.option-text {
     flex-wrap: wrap;
     justify-content: space-between;
     width: calc(50% - 12px);
+  }
+
+  #optionOnlyContainer {
+    gap: 20px;
+    width: 580px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .option-text-only {
+    width: 186px;
+  }
+
+  .selected-text-only {
+    width: 186px;
+  }
+
+  .result-slide {
+    background: #f5d6dd;
+    width: 420px;
+    height: 670px;
+  }
+
+  .result-slide p {
+    padding: 0 12px;
+  }
+
+  .products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 30px 0 81px 0;
+  }
+
+  .product1 img,
+  .product2 img {
+    width: 187px;
+    height: 187px;
+  }
+
+  .info-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  p.info-price,
+  p.info-name {
+    margin-top: 0px;
+    padding: 0px;
   }
 }
