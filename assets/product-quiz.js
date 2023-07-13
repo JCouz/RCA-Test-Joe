@@ -180,16 +180,16 @@ function showSlide(i) {
       const optionText = document.createElement('p');
       optionText.className = 'option-text';
       optionText.textContent = currentQuestion.options[j].typeText;
-      // optionText.className = currentQuestion.options[j].selected
-      //   ? 'selected-text'
-      //   : 'option-text';
-      // img.addEventListener('click', function () {
-      //   currentQuestion.options[j].selected =
-      //     !currentQuestion.options[j].selected;
-      //   optionText.className = currentQuestion.options[j].selected
-      //     ? 'selected-text'
-      //     : 'option-text';
-      // });
+      optionText.className = currentQuestion.options[j].selected
+        ? 'selected-text'
+        : 'option-text';
+      img.addEventListener('click', function () {
+        currentQuestion.options[j].selected =
+          !currentQuestion.options[j].selected;
+        optionText.className = currentQuestion.options[j].selected
+          ? 'selected-text'
+          : 'option-text';
+      });
 
       const d = document.createElement('div');
       d.className = 'innerContainer';

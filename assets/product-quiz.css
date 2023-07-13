@@ -120,10 +120,16 @@ button {
   line-height: normal;
   letter-spacing: 0.3px;
   padding-bottom: 20px;
+  padding-top: 100px;
 }
 
-.inner-container img {
+.innerContainer {
   cursor: pointer;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 165px;
 }
 
 p#questionText {
@@ -142,19 +148,20 @@ p.option-text {
   line-height: normal;
   letter-spacing: 0.48px;
   text-transform: uppercase;
-  padding-top: 33px;
+  padding-top: 26px;
+  max-width: 165px;
+  display: inline-block;
 }
 
 #optionContainer {
   display: flex;
   flex-direction: row;
-  gap: 49px;
   padding: 38px 0 116px 0;
-  flex-wrap: wrap;
 }
 
 .selected-image {
-  border: 3px solid #d83696;
+  outline: 4px solid #d83696;
+  outline-offset: -3px;
   width: 119px;
   height: 119px;
   border-radius: 75px;
