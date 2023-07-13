@@ -8,12 +8,14 @@ const resultBtn = document.getElementById('resultBtn');
 const exitBtn = document.getElementById('exitBtn');
 const optionContainer = document.getElementById('optionContainer');
 const optionOnlyContainer = document.getElementById('optionOnlyContainer');
+const restartBtn = document.getElementById('restartBtn');
 
 startBtn.addEventListener('click', startQuiz);
 backBtn.addEventListener('click', goToPreviousSlide);
 nextBtn.addEventListener('click', goToNextSlide);
 resultBtn.addEventListener('click', goToResultSlide);
 exitBtn.addEventListener('click', goToExit);
+restartBtn.addEventListener('click', restartQuiz);
 
 let currentSlide = 0;
 
@@ -146,6 +148,8 @@ let questions = {
   },
 };
 
+let selectedAnswers = {};
+
 function startQuiz() {
   startSlide.classList.add('hide');
   quizSlides.classList.remove('hide');
@@ -181,6 +185,10 @@ function showSlide(i) {
           ? 'selected-image'
           : '';
 
+        selectedAnswers[i] = currentQuestion.options
+          .filter((option) => option.selected)
+          .map((option) => option.typeText);
+
         optionText.className = currentQuestion.options[j].selected
           ? 'selected-text'
           : 'option-text';
@@ -210,6 +218,9 @@ function showSlide(i) {
       const optionText = document.createElement('p');
       optionText.className = 'option-text-only';
       optionText.textContent = currentQuestion.options[j].typeText;
+      selectedAnswers[i] = currentQuestion.options
+        .filter((option) => option.selected)
+        .map((option) => option.typeText);
 
       optionText.className = currentQuestion.options[j].selected
         ? 'selected-text-only'
@@ -260,4 +271,17 @@ function goToResultSlide() {
 
 function goToExit() {
   resultSlide.classList.add('hide');
+}
+
+console.log(selectedAnswers);
+
+function restartQuiz() {
+  selectedAnswers = {};
+  currentSlide = 0;
+
+  startSlide.classList.remove('hide');
+  quizSlides.classList.add('hide');
+  resultSlide.classList.add('hide');
+
+  showSlide(currentSlide);
 }
