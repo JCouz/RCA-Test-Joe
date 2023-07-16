@@ -19,6 +19,8 @@ restartBtn.addEventListener('click', restartQuiz);
 
 let currentSlide = 0;
 
+//  data structure
+
 let questions = {
   slide1: {
     question: 'What is your hair type?',
@@ -148,6 +150,8 @@ let questions = {
   },
 };
 
+// stored answers
+
 let selectedAnswers = {};
 
 function startQuiz() {
@@ -155,6 +159,10 @@ function startQuiz() {
   quizSlides.classList.remove('hide');
   showSlide(currentSlide);
 }
+
+/* A function that iterates through each slides data, and generates the content for the h1 and p tags, followed by the generation of
+a new container for each image and text per option, and appends them into the optionContainer or if it is the index of 2, it does the same but 
+only generates a p tag per option and adds them to the optionOnlyContainer  */
 
 function showSlide(i) {
   const question = document.getElementById('question');
@@ -181,6 +189,7 @@ function showSlide(i) {
       img.addEventListener('click', function () {
         currentQuestion.options[j].selected =
           !currentQuestion.options[j].selected;
+
         img.className = currentQuestion.options[j].selected
           ? 'selected-image'
           : '';
@@ -218,6 +227,7 @@ function showSlide(i) {
       const optionText = document.createElement('p');
       optionText.className = 'option-text-only';
       optionText.textContent = currentQuestion.options[j].typeText;
+
       selectedAnswers[i] = currentQuestion.options
         .filter((option) => option.selected)
         .map((option) => option.typeText);
@@ -225,6 +235,7 @@ function showSlide(i) {
       optionText.className = currentQuestion.options[j].selected
         ? 'selected-text-only'
         : 'option-text-only';
+
       optionText.addEventListener('click', function () {
         currentQuestion.options[j].selected =
           !currentQuestion.options[j].selected;
@@ -236,6 +247,8 @@ function showSlide(i) {
       document.getElementById('optionOnlyContainer').appendChild(optionText);
     }
   }
+
+  // Due to i being 0 index based and .length not being, I am reducing the result by 1 to be in line with the index, then adding and removing the classes as needed
 
   if (i === Object.keys(questions).length - 1) {
     nextBtn.classList.add('hide');
